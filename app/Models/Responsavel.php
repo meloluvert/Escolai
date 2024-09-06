@@ -15,4 +15,7 @@ class Responsavel extends Model
         'telefone',
         'foto_de_perfil'
     ];
+    public function escola_avaliacao() {
+        return $this->hasMany('App\Models\EscolaAvaliacao', 'responsavel_id');
+        }
 }

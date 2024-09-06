@@ -11,4 +11,7 @@ class Foto extends Model
     protected $fillable = [
         'endereco','escola_id'
     ];
+    public function escola() {
+        return $this->belongsTo('App\Models\Escola') ;
+    }
 }

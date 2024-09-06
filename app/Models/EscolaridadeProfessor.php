@@ -13,4 +13,11 @@ class EscolaridadeProfessor extends Model
         'escolaridade_id',
         'porcentagem'
     ];
+
+    public function escolaridade() {
+        return $this->belongsTo('App\Models\Escolaridade') ;
+    }
+    public function escola() {
+        return $this->belongsTo('App\Models\Escola') ;
+    }
 }

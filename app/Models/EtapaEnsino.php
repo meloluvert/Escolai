@@ -11,4 +11,7 @@ class EtapaEnsino extends Model
     protected $fillable = [
         'nome'
     ];
+    public function escola_etapa_ensino() {
+        return $this->hasMany('App\Models\EscolaEtapaEnsino', 'etapa_ensino_id');
+        }
 }

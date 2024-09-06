@@ -11,5 +11,7 @@ class Escolaridade extends Model
     protected $fillable = [
         'nome'
     ];
-    
+    public function escola_escolaridade() {
+        return $this->hasMany('App\Models\EscolaridadeProfessor', 'escolaridade_id');
+    }   
 }

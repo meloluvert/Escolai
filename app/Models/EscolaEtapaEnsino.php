@@ -12,5 +12,10 @@ class EscolaEtapaEnsino extends Model
         'escola_id',
         'etapa_ensino_id',
     ];
-    
+    public function etapa_ensino() {
+        return $this->belongsTo('App\Models\EtapaEnsino') ;
+    }
+    public function escola() {
+        return $this->belongsTo('App\Models\Escola') ;
+    }
 }

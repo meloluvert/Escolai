@@ -12,4 +12,7 @@ class Motorista extends Model
         'name',
         'email',
         'password'];
+        public function anuncio() {
+            return $this->hasMany('App\Models\Anuncios', 'motorista_id');
+        }   
 }

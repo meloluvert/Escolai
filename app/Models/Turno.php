@@ -10,4 +10,7 @@ class Turno extends Model
     use HasFactory;
     protected $fillable = [
         'nome'];
+        public function turno_escola() {
+            return $this->hasMany('App\Models\TurnoEscola', 'turno_id');
+            }
 }

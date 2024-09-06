@@ -13,5 +13,10 @@ class EscolaQualidade extends Model
         'qualidade_id',
     ];
     
-    
+    public function qualidade() {
+        return $this->belongsTo('App\Models\Qualidade') ;
+    }
+    public function escola() {
+        return $this->belongsTo('App\Models\Escola') ;
+    }
 }

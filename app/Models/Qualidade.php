@@ -11,4 +11,7 @@ class Qualidade extends Model
     protected $fillable = [
         'nome'
     ];
+    public function escola_qualidade() {
+        return $this->hasMany('App\Models\EscolaQualidade', 'qualidade_id');
+        }
 }

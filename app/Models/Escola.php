@@ -22,7 +22,27 @@ class Escola extends Model
         'descricao1',
         'descricao2',
     ];
-    public function endereco() {
-        return $this->belongsTo('App\Models\Endereco') ;
+    public function endereco()
+    {
+        return $this->belongsTo('App\Models\Endereco');
     }
+    public function escola_etapa_ensino()
+    {
+        return $this->hasMany('App\Models\EscolaEtapaEnsino', 'escola_id');
+    }
+    public function escolaridade_professor()
+    {
+        return $this->hasMany('App\Models\EscolaridadeProfessor', 'escola_id');
+    }
+    public function escola_qualidade()
+    {
+        return $this->hasMany('App\Models\EscolaQualidade', 'escola_id');
+    }
+    public function escola_avaliacao()
+    {
+        return $this->hasMany('App\Models\EscolaAvaliacao', 'escola_id');
+    }
+    public function turno_escola() {
+        return $this->hasMany('App\Models\TurnoEscola', 'escola-id');
+        }
 }

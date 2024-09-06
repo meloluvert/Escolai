@@ -11,4 +11,11 @@ class TurnoEscola extends Model
     protected $fillable = [
         'turno_id',
         'escola_id'];
+
+        public function turno() {
+            return $this->belongsTo('App\Models\Turno') ;
+        }
+        public function escola() {
+            return $this->belongsTo('App\Models\Escola') ;
+        }
 }
