@@ -1,33 +1,139 @@
 /* Style the tab */
-.tab {
-    background-color: #f1f1f1;
-  }
-  
-  /* Style the h4s inside the tab */
-  .tab h4 {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
-  
-  /* Change background color of h4s on hover */
-  .tab h4:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab h4.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-  }
+:root {
+  --primary: #314D5D;
+  --star_color: #F0CC4C
+}
+
+body {
+  font-size: large;
+}
+
+/* Style the h4s inside the tab */
+img {
+  display: block;
+}
+
+#logo {
+  width: 5rem;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.card-body {
+  background-color: var(--primary);
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+}
+
+#localizacaoImagem {
+  width: 2rem;
+}
+/* #fundo-estrelas-total{
+  background-color: aliceblue;
+}
+#fundo-estrelas-amarelas{
+  display: flex;
+  width: calc();
+} */
+ #estrela{
+  width: 7rem;
+ }
+ #star {
+  margin: 0;
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.35rem solid var(--star_color);
+  border-left: 0.5rem solid transparent;
+  transform: rotate(35deg);
+}
+
+#star:before {
+  border-bottom: 0.4rem solid var(--star_color);
+  border-left: 0.15rem solid transparent;
+  border-right: 0.15rem solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.225rem;
+  left: -0.325rem;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+
+#star:after {
+  position: absolute;
+  display: block;
+  top: 0.015rem;
+  left: -0.525rem;
+  width: 0;
+  height: 0;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.35rem solid var(--star_color);
+  border-left: 0.5rem solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+
+.tab h4 {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of h4s on hover */
+.tab h4:hover {
+  background-color: #f3f3f3;
+
+}
+
+/* Create an active/current tablink class */
+.tab h4.active {
+  border-bottom: 1px solid var(--primary)
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.footer-icon {
+  width: 4rem;
+}
+
+.card-footer li {
+  list-style-type: none;
+}
+
+.card-footer li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: 3px;
+}

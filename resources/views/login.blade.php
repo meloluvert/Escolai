@@ -14,6 +14,7 @@
     <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Deixe-me Conectado</label>
+      <p>Não tem cadastro? <a href="/cadastro">Cadastre-se</a></p>
     </div>
     <button type="button" class="btn btn-danger">Cancelar</button>
     <button type="submit" class="btn btn-primary">Entrar</button>
