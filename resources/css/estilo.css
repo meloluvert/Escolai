@@ -1,0 +1,33 @@
+/* Style the tab */
+.tab {
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the h4s inside the tab */
+  .tab h4 {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of h4s on hover */
+  .tab h4:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab h4.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }

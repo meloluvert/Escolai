@@ -1,15 +1,3 @@
-<div>
-    <h3 style="display:flex; align-items: center; justify-content: center;">CADASTRAR-SE</h3>
-</div>
-<div style="display:flex; gap: 20%; align-items: center; justify-content: center;">
-    <div>
-        <h4>RESPONSÁVEL</h4>
-    </div>
-    <div>
-        <h4>ESCOLA</h4>
-    </div>
-</div>
-<div style="display:flex; align-items: center; justify-content: center;">
     <form>
         <div style="display:flex">
             <div class="mb-3" style="align-items: center; justify-content: center;">
@@ -99,4 +87,3 @@
         <button type="submit" class="btn btn-primary">Cancelar</button>
         <button type="submit" class="btn btn-primary">Cadastrar-se</button>
     </form>
-</div>

@@ -1,5 +1,5 @@
 @extends('layout')
-<div>
+<div class="tabcontent" id="responsavel">
   <h3 style="display:flex; align-items: center; justify-content: center;">CADASTRAR-SE</h3>
 </div>
 <div style="display:flex; gap: 20%; align-items: center; justify-content: center;">

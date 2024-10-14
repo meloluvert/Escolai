@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/login2', function () {
     return view('login');
 });
-Route::get('/cad', function () {
+Route::get('/cadastro', function () {
     return view('cadastro');
 });
 Auth::routes();

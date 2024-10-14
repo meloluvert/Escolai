@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top m-4" style='background-color:#314D5D'>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style='background-color:#314D5D'>
   <img src="{{asset('storage/imagens/logo.png')}}" alt="logo">
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
