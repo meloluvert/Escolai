@@ -13,13 +13,12 @@
 <body>
     @component('navbar')
     @endcomponent
-    <div class="container">
+
         <main role="main" class="mt-8 py-4">
             @hasSection('content')
                 @yield('content')
             @endif
         </main>
-    </div>
     
     @component('footer')
     @endcomponent
