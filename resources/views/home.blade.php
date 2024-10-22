@@ -7,7 +7,7 @@
                 
                 <div class="card-body">
                     <div class="d-flex justify-content-right align-items-center ">
-                        <img src="{{ asset('storage/imgs/localizacao.png') }}" id="localizacaoImagem" alt="">
+                        <img src="{{asset('storage/imgs/localizacao.png') }}" id="localizacaoImagem" alt="">
                         <p class="m-0">Varginha-MG</p>
                     </div>
                     <div>
@@ -16,7 +16,7 @@
                             <li>Quadra e Piscina</li>
                             <li>Cursos internos de extensão</li>
                         </ul>
-                    </div>
+                    </div>  
                     <p class="card-text">O Marista oferece uma educação integral, focada no desenvolvimento
                         humano, qualidade de ensino e incentivo ao protagonismo e solidariedade. Com mais de 200
                         anos de história, a rede prepara estudantes para o futuro através de experiências dentro

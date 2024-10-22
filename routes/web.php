@@ -16,6 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 })->name('inicio');
+
+Route::get('/editarPerfil', function () {
+    return view('Escola/perfil');
+})->name('inicio');
+Route::get('/informacoes', function () {
+    return view('Escola/informacoes');
+})->name('inicio');
+Route::get('/editarEscola', function () {
+    return view('Escola/editar');
+})->name('inicio');
+Route::get('/editarResponsavel', function () {
+    return view('Responsavel/editar');
+})->name('inicio');
 Route::get('/cadastroanuncio', function () {
     return view('Anuncio/cadastro');
 })->name('inicio');
