@@ -19,7 +19,7 @@
     </div>
     <div class="tabcontent" id="responsavel">
         <div style="display:flex; align-items: center; justify-content: center;">
-            @include('Responsavel.cadastro           ')
+            @include('Responsavel.cadastro')
         </div>
     </div>
     <script>

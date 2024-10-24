@@ -29,7 +29,7 @@ Route::get('/editarEscola', function () {
 Route::get('/editarResponsavel', function () {
     return view('Responsavel/editar');
 })->name('inicio');
-Route::get('/cadastroanuncio', function () {
+Route::get('/cadastroAnuncio', function () {
     return view('Anuncio/cadastro');
 })->name('inicio');
 Route::get('/login2', function () {
@@ -38,6 +38,16 @@ Route::get('/login2', function () {
 Route::get('/cadastro', function () {
     return view('cadastro');
 });
+
+Route::get('/docs', function () {
+    return view('Informativo/docs');
+})->name('docs');
+Route::get('/escolher', function () {
+    return view('Informativo/escolher');
+})->name('escolher');
+
 Auth::routes();
+
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

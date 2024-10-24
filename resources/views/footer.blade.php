@@ -9,8 +9,8 @@
 
     <div class=" flew-grow-2">
         <ul class="m-0" style="m-0 " >
-            <li class="d-flex flex-row align-items-center"><img src="{{ asset('storage/imgs/ajuda.png') }}"  alt="">  <a href=""> Como escolher boas escolas</a></li>
-            <li class="d-flex flex-row align-items-center"><img src="{{ asset('storage/imgs/ajuda.png') }}"  alt="">  <a href="">  Quais documentos normalmente escolas pedem?</a></li>
+            <li class="d-flex flex-row align-items-center"><img src="{{ asset('storage/imgs/ajuda.png') }}"  alt="">  <a href="docs"> Como escolher boas escolas</a></li>
+            <li class="d-flex flex-row align-items-center"><img src="{{ asset('storage/imgs/ajuda.png') }}"  alt="">  <a href="escolher">  Quais documentos normalmente escolas pedem?</a></li>
         </ul>
     </div>
 

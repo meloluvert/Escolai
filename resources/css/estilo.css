@@ -7,11 +7,16 @@
 
 body {
   font-size: large;
+  background-color: #F6F7F8;
 }
 
 /* Style the h4s inside the tab */
 img {
   display: block;
+}
+#anuncio{     
+  color: white;
+  padding: 10px 1rem;
 }
 
 #logo {
@@ -42,6 +47,21 @@ main {
 
 #localizacaoImagem {
   width: 2rem;
+}
+
+.card-avaliacao{
+  background-color:white;
+}
+.estrelas-perfil{
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+.header-perfil{
+  height: 10rem;
+}
+.titulo-perfil{
+  font-size: 5rem;
+  color: var(--primary);
 }
 #nome-logo-escola{
   font-size: 2rem;

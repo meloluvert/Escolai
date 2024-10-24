@@ -19,7 +19,7 @@
                 </div>
                 <div class="col">
                     <div class="d-flex justify-content-center">
-                        <div id="logo-escola" style="background-image: url({{ asset('storage/imgs/instagram.png') }})">
+                        <div id="logo-escola" style="background-image: url({{ asset('storage/imgs/logo.png') }})">
                         </div>
                     </div>
 

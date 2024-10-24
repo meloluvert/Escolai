@@ -1,53 +1,53 @@
 <form>
     <div class="row" style="display:flex">
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">Nome*</label>
+            <label for="nome" class="form-label">Nome*</label>
             <input type="text" placeholder="Amaral" class="form-control" id="nome" aria-describedby="emailHelp">
         </div>
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">Telefone*</label>
-            <input type="number" placeholder="(35) 01234-5678" class="form-control" id="numero">
+            <label for="telefone" class="form-label">Telefone*</label>
+            <input type="number" placeholder="(35) 01234-5678" class="form-control" id="telefone">
         </div>
     </div>
     <div class="row" style="display:flex">
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">E-mail*</label>
-            <input type="email" placeholder="amaral@email.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="email" class="form-label">E-mail*</label>
+            <input type="email" placeholder="amaral@email.com" class="form-control" id="email" aria-describedby="emailHelp">
         </div>
         <div>
-            <label for="exampleInputEmail1" class="col form-label">Foto de Perfil*</label>
+            <label for="avatar" class="col form-label">Foto de Perfil*</label>
             <input type="file" name="avatar" id="avatar">
         </div>
     </div>
     <div class="col mb-3" style="align-items: center; justify-content: center;">
-        <label for="exampleInputPassword1" class="form-label">Senha*</label>
-        <input type="password" placeholder="********" class="form-control" id="exampleInputPassword1">
+        <label for="senha" class="form-label">Senha*</label>
+        <input type="password" placeholder="********" class="form-control" id="senha">
     </div>
     <div class="col mb-3" style="align-items: center; justify-content: center;">
-        <label for="exampleInputPassword1" class="form-label">Confirmar Senha*</label>
-        <input type="password" placeholder="********" class="form-control" id="exampleInputPassword1">
+        <label for="senhaConfirm" class="form-label">Confirmar Senha*</label>
+        <input type="password" placeholder="********" class="form-control" id="senhaConfirm">
     </div>
     <div class="mb-3" style="align-items: center; justify-content: center;">
-        <label for="exampleInputEmail1" class="form-label">CEP*</label>
+        <label for="cep" class="form-label">CEP*</label>
         <input type="number" placeholder="00000-000" class="form-control" id="cep">
     </div>
     <div class="row" style="display:flex">
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">Endereço*</label>
+            <label for="endereco" class="form-label">Endereço*</label>
             <input type="text" placeholder="Rua Renato Gaúcho" class="form-control" id="endereco" aria-describedby="emailHelp">
         </div>
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">Número*</label>
+            <label for="numcasa" class="form-label">Número*</label>
             <input type="number" placeholder="07" class="form-control" id="numcasa">
         </div>
     </div>
     <div class="row" style="display:flex">
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">Estado*</label>
+            <label for="estado" class="form-label">Estado*</label>
             <input type="text" placeholder="MG" class="form-control" id="estado" aria-describedby="emailHelp">
         </div>
         <div class="col mb-3" style="align-items: center; justify-content: center;">
-            <label for="exampleInputEmail1" class="form-label">cidade*</label>
+            <label for="cidade" class="form-label">cidade*</label>
             <input type="text" placeholder="Varginha" class="form-control" id="cidade">
         </div>
     </div>

@@ -1,5 +1,58 @@
 @extends('layout')
 @section('content')
+@component('anuncio')
+@endcomponent
+    
+
+        <div>
+            <h4>Filtro:</h4>
+            <Button>Limpar Filtros</Button>
+            <div>
+                <h4>Bairro:</h4>
+                <input type="text" placeholder="Digite seu Bairro">
+            </div>
+            <div>
+                <h4>Etapa de Ensino:</h4>
+                <select name="etapa" id="etapa">
+                    <option value="infantil">Ensino Infantil</option>
+                    <option value="fundamental1">Ensino Fundamental 1</option>
+                    <option value="fundamental2">Ensino Fundamental 2</option>
+                    <option value="medio">Ensino Médio</option>
+                    <option value="superior">Ensino Superior</option>
+                </select>
+            </div>
+            <div>
+                <h4>Série:</h4>
+                <select name="etapa" id="etapa">
+                    <option value="1">1ª Série</option>
+                    <option value="2">2ª Série</option>
+                    <option value="3">3ª Série</option>
+                    <option value="4">4ª Série</option>
+                    <option value="5">5ª Série</option>
+                    <option value="6">6ª Série</option>
+                    <option value="7">7ª Série</option>
+                    <option value="8">8ª Série</option>
+                    <option value="9">9ª Série</option>
+                    <option value="10">1ª Série Médio</option>
+                    <option value="20">2ª Série Médio</option>
+                    <option value="30">3ª Série Médio</option>
+                </select>
+            </div>
+            <div>
+                <h4>Valor da Mensalidade:</h4>
+                <p>R$ 1,00 até R$ 10.000,00</p>
+                <input type="range">
+            </div>
+            <div>
+                <h4>Turno:</h4>
+                <input type="checkbox" id="manha"/> <label for="manha">Manhã</label>
+                <input type="checkbox" id="tarde"/> <label for="tarde">Tarde</label>
+                <input type="checkbox" id="integral"/> <label for="integral">Integral</label>
+                <input type="checkbox" id="semi"/> <label for="semi">Semi-Integral</label>
+                <input type="checkbox" id="noturno"/> <label for="noturno">Noturno</label>
+                <input type="checkbox" id="sabado"/> <label for="sabado">Sábado</label>
+            </div>
+        </div>
         <div class="row justify-content-around m-0">
 @for ($i = 0; $i < 6; $i++)
             <div class="card col-3 mx-1 my-3 " style="">
@@ -39,8 +92,28 @@
                         </div>
                     </div>
                 </div>
-               
             </div>
             @endfor
+        </div>
+        <div>
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only"></span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
         </div>
 @endsection
