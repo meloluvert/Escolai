@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
-<P>
+<div class="container">
+<p style="text-align:justify;">
 Optar por uma escola de qualidade para o seu filho é uma decisão crucial que pode afetar o seu progresso acadêmico e pessoal. Seguem algumas sugestões para auxiliá-lo neste processo.
 
 Inicialmente, é crucial investigar a reputação da instituição de ensino. Verifique as opiniões de pais e estudantes, bem como as classificações e comentários disponíveis na internet. Geralmente, uma reputação positiva sinaliza um ambiente educacional favorável.
@@ -15,5 +16,5 @@ Ademais, leve em conta o tamanho das classes. Escolas com grupos menores costuma
 Não deixe de conferir as atividades complementares disponíveis. Clubes, atividades esportivas e outras alternativas podem aprimorar o ambiente escolar e incentivar o aprimoramento de competências sociais e pessoais.
 
 Finalmente, observe como a escola se relaciona com a comunidade e incentiva a participação dos pais. Uma boa interação com a comunidade pode favorecer uma experiência educacional mais completa e integrada. Com essas sugestões em mente, será possível tomar uma decisão mais consciente e encontrar uma instituição de ensino que satisfaça as necessidades do seu filho.
-</P>
+</p>
 @endsection

@@ -17,7 +17,7 @@
     @component('navbar')
     @endcomponent
 
-        <main role="main" class="mt-8 py-4">
+        <main role="main" class="mt-8">
             @hasSection('content')
                 @yield('content')
             @endif

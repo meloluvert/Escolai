@@ -4,7 +4,7 @@
     <div>
         <h3 style="display:flex; align-items: center; justify-content: center;">EDITE</h3>
     </div>
-    <div  id="escola">
+    <div  id="escola" class="my-1">
         <div style="display:flex; align-items: center; justify-content: center;">
             <form>
                 <div class="row" style="display:flex">
