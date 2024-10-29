@@ -10,11 +10,11 @@
                 <div class="col">
                     <div class="mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Título</label>
-                        <input type="text" class="form-control" id="titulo">
+                        <input type="text" placeholder="lorem ipsum" class="form-control" id="titulo">
                     </div>
                     <div class="mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Descrição</label>
-                        <textarea name="descricao" id="" class="form-control" cols="30" rows="10"></textarea>
+                        <textarea name="descricao" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate soluta doloremque, incidunt ab optio deserunt quia voluptatum magnam explicabo provident maxime rerum error repudiandae ex mollitia unde sapiente? Voluptatum, debitis?" id="" class="form-control" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="col">
@@ -22,6 +22,7 @@
                         <div id="logo-escola" style="background-image: url({{ asset('storage/imgs/logo.png') }})">
                         </div>
                     </div>
+                    
 
                         <div id="nome-logo-escola">NOME</div>
                         <div>
@@ -31,7 +32,7 @@
                                         <label for="exampleInputEmail1" class="form-label">Tempo</label>
                                     </div>
                                     <div class="col">
-                                        <input type="number" class="form-control" id="tempo">
+                                        <input type="number" placeholder="5" class="form-control" id="tempo">
                                     </div>
                                     <div class="col">
                                         <select name="" class="form-control" id="">
@@ -48,7 +49,7 @@
                             </div>
                             <div class="row d-flex align-items-center ">
                                 <label for="exampleInputEmail1" class="col-3 form-l abel">Alcance</label>
-                                <input type="number" class="col form-control" id="alcance">
+                                <input type="number" placeholder="1000" class="col form-control" id="alcance">
                                 <span class="col-3">pessoas</p>
                             </div>
                             <div class="mb-3 form-check">

@@ -45,12 +45,26 @@
             </div>
             <div>
                 <h4>Turno:</h4>
+                <div>
                 <input type="checkbox" class="form-check-input" id="manha"/> <label    class="form-check-label" for="manha">Manhã</label>
+</div>
+<div>
                 <input type="checkbox" class="form-check-input" id="tarde"/> <label    class="form-check-label" for="tarde">Tarde</label>
+                </div>
+                <div>
                 <input type="checkbox" class="form-check-input" id="integral"/> <label class="form-check-label" for="integral">Integral</label>
+                </div>
+                <div>
+                
                 <input type="checkbox" class="form-check-input" id="semi"/> <label class="form-check-label" for="semi">Semi-Integral</label>
+                </div>
+                <div>
+                
                 <input type="checkbox" class="form-check-input" id="noturno"/> <label  class="form-check-label" for="noturno">Noturno</label>
+                </div>
+                <div>
                 <input type="checkbox" class="form-check-input" id="sabado"/> <label   class="form-check-label" for="sabado">Sábado</label>
+                </div>
             </div>
         </div>
         
