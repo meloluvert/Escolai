@@ -15,7 +15,7 @@
                     <input type="text" placeholder="35%" class="form-control w-25" id="exampleInputPassword1">
                 </div>
                 </div>
-                <div class="btn btn-primary w-100 m-1" type="submit" id="add">+</div>
+                <div class="btn btn-secondary w-100 m-1" type="submit" id="add">+</div>
 
             </div>
             <div class="col">
@@ -35,7 +35,7 @@
 
                     </div>
 
-                    <p class="row w-25 btn btn-primary" id="adicionar">+</p>
+                    <p class="row w-25 btn btn-secondary" id="adicionar">+</p>
                 </div>
             </div>
         </div>

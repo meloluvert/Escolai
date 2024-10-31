@@ -6,7 +6,7 @@
 <div class="row m-0" >
         <div class="col-2 p-3 ">
             <h4>Filtro:</h4>
-            <Button>Limpar Filtros</Button>
+            <button class="btn btn-primary">Limpar Filtros</button>
             <div>
                 <h4>Bairro:</h4>
                 <input type="text" class="form-control" placeholder="Digite seu Bairro">

@@ -85,7 +85,7 @@
                         <span>maristavga@dominio.com</span>
 
                     </div>
-                    <div id="piechart"></div>
+                    <div id="piechart" class="w-100"></div>
 
                 </div>
 
@@ -165,7 +165,7 @@ function drawChart() {
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'', 'height':400};
+  var options = {'title':'', 'height':400, 'backgroundColor':'#F6F7F8' };
 
   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
