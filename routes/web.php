@@ -35,10 +35,6 @@ Route::get('/cadastroAnuncio', function () {
 Route::get('/login2', function () {
     return view('login');
 });
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
-
 Route::get('/docs', function () {
     return view('Informativo/docs');
 })->name('docs');
@@ -49,5 +45,7 @@ Route::get('/escolher', function () {
 Auth::routes();
 
 
-
+Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('indexContatos');
+Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('nova');
+Route::get('/cadastro/novo  ', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

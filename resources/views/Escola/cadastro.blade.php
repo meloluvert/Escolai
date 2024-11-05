@@ -1,4 +1,4 @@
-    <form>
+    <form action="{{route('gravaNovaEscola')}}">
         <div class="row" style="display:flex">
             <div class=" col mb-3" style="align-items: center; justify-content: center;">
                 <label for="nome" class="form-label">Nome*</label>
@@ -67,7 +67,7 @@
         </div>
         <div class="mb-3" style="align-items: center; justify-content: center;">
             <label for="cpfcoordenador" class="form-label">CPF do Coordenador*</label>
-            <input type="tel" placeholder="123.456.789-10" class="form-control" name="nomeCoordenador" id="cpfcoordenador" required>
+            <input type="tel" placeholder="123.456.789-10" class="form-control" name="cpfCoordenador" id="cpfcoordenador" required>
         </div>
         <div class="row" style="display:flex">
             <div class="col mb-3" style="align-items: center; justify-content: center;">
