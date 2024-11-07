@@ -41,11 +41,15 @@ Route::get('/docs', function () {
 Route::get('/escolher', function () {
     return view('Informativo/escolher');
 })->name('escolher');
+Route::get('/sobre', function () {
+    return view('sobre');
+})->name('sobre');
+
 
 Auth::routes();
 
 
 Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('indexContatos');
-Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('nova');
-Route::get('/cadastro/novo  ', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
+Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('novaEscola');
+Route::post('/cadastro/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

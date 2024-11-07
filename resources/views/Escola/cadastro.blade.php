@@ -1,4 +1,5 @@
-    <form action="{{route('gravaNovaEscola')}}">
+    <form action="{{route('gravaNovaEscola')}}" method="POST">
+        @csrf
         <div class="row" style="display:flex">
             <div class=" col mb-3" style="align-items: center; justify-content: center;">
                 <label for="nome" class="form-label">Nome*</label>
@@ -53,22 +54,11 @@
         </div>
         <div class="row" style="display:flex">
             <div class="col mb-3" style="align-items: center; justify-content: center;">
-                <label for="nalunos" class="form-label">Nº de Alunos*</label>
-                <input type="number" placehoder="77 00" class="form-control" name="qtdAlunos" id="nalunos" required>
-            </div>
-            <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="mensalidade" class="form-label">Média de Mensalidade*</label>
                 <input type="number" placeholder="R$700,00" class="form-control" name="mediaMensalidade" id="mensalidade" required>
             </div>
         </div>
-        <div class="mb-3" style="align-items: center; justify-content: center;">
-            <label for="nomecoordenador" class="form-label">Nome do Coordenador*</label>
-            <input type="text" placeholder="Ronaldo" class="form-control" id="nomecoordenador">
-        </div>
-        <div class="mb-3" style="align-items: center; justify-content: center;">
-            <label for="cpfcoordenador" class="form-label">CPF do Coordenador*</label>
-            <input type="tel" placeholder="123.456.789-10" class="form-control" name="cpfCoordenador" id="cpfcoordenador" required>
-        </div>
+        
         <div class="row" style="display:flex">
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="instagram" class="form-label">Instagram</label>

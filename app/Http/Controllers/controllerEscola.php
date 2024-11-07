@@ -14,7 +14,8 @@ class controllerEscola extends Controller
     {
         $dados = Escola::all();
         foreach ($dados as $item) {
-            $item->qualidades = ['h','k,','jjk'];
+            $item->qualidades = ['pública','tem o eduardo', 'ótimo'];
+            $item->cidade = 'Varginha';
         };
         return view('home', compact('dados'));
     }
@@ -71,10 +72,8 @@ public function store(Request $request){
     $dados->telefone = $request->input('telefone');
     $dados->email = $request->input('email');
     $dados->password = $request->input('senha');
-    $dados->cpf_coordenador = $request->input('cpfCoordenador');
     $dados->endereco = $request->input('endereco');
     $dados->media_mensalidade = $request->input('mediaMensalidade');
-    $dados->num_alunos = $request->input('qtdAlunos');
     $dados->whatsapp = $request->input('whatsapp');
     $dados->instagram = $request->input('instagram');
     $dados->endereco = '11';

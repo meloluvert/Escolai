@@ -16,11 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('cpf_coordenador', length:11);
             $table->foreignId('endereco')->references('id')->on('enderecos')->nullable();
             $table->string('telefone', length:15);
             $table->float('media_mensalidade');
-            $table->integer('num_alunos');
             $table->string('whatsapp', length:20);
             $table->string('instagram', length:45);
             $table->string('descricao1', length:1000);
