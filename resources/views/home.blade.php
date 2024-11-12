@@ -71,8 +71,7 @@
         <div class="row col-10 justify-content-around p-0 m-0">
             @foreach ($dados as $item)
                 
-                
-            <div class="card col-3 mx-1 my-3 " style="">
+            <a class="card col-3 mx-1 my-3 link-card" href="/escola/{{$item->id}}">
                 <img class="card-img-top" src="{{ asset('storage/imgs/imagemTeste.png') }}" alt="Card image cap">
                 
                 <div class="card-body">
@@ -100,8 +99,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            </a>
             @endforeach
         </div>
 </div>

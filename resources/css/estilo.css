@@ -18,7 +18,9 @@ img {
   color: white;
   padding: 10px 1rem;
 }
-
+.link-card{
+  text-decoration: none;
+}
 #logo {
   width: 5rem;
 }

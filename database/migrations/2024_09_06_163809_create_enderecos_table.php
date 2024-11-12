@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
-            $table->string('cep', length: 8)->nullable(true);
+            $table->string('cep', length: 9)->nullable(true);
             $table->string('rua', length: 100);
             $table->string('estado', length: 2);
             $table->string('cidade');

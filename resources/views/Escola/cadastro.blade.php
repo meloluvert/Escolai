@@ -30,12 +30,12 @@
         </div>
         <div class="mb-3" style="align-items: center; justify-content: center;">
             <label for="cep" class="form-label">CEP*</label>
-            <input type="tel" class="form-control" placeholder="77889-99" name="cep" id="cep" required>
+            <input type="tel" class="form-control"  placeholder="77889-99" name="cep" id="cep" required>
         </div>
         <div class="row" style="display:flex">
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="endereco" class="form-label">Endereço*</label>
-                <input type="text" class="form-control" placeholder="Rua Romário" name="endereco" id="endereco" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control" id="endereco" placeholder="Rua Romário" name="endereco" id="endereco" aria-describedby="emailHelp" required>
             </div>
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="numcasa" class="form-label">Número*</label>
@@ -45,11 +45,15 @@
         <div class="row" style="display:flex">
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="estado" class="form-label">Estado*</label>
-                <input type="text" class="form-control" placeholder="MG" name="estado" id="estado" aria-describedby="emailHelp" >
+                <input type="text" class="form-control" id="uf" placeholder="MG" name="estado" id="estado" aria-describedby="emailHelp" >
             </div>
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="cidade" class="form-label">Cidade*</label>
-                <input type="text" placeholder="Varginha" class="form-control" id="cidade">
+                <input type="text" placeholder="Varginha" id="cidade" class="form-control" name="cidade" id="cidade">
+            </div>
+            <div class="col mb-3" style="align-items: center; justify-content: center;">
+                <label for="bairro" class="form-label">Bairro*</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Damasco" " class="form-control">
             </div>
         </div>
         <div class="row" style="display:flex">
@@ -76,4 +80,24 @@
         </div>
         <button type="submit" class="btn btn-danger">Cancelar</button>
         <button type="submit" class="btn btn-primary">Cadastrar-se</button>
+        <script>
+			$("#cep").blur(function(){
+				var cep = this.value.replace(/[^0-9]/, "");
+				
+				if(cep.length != 8){
+					return false;
+				}
+		
+				var url = "https://viacep.com.br/ws/"+cep+"/json/";
+			
+				$.getJSON(url, function(dadosRetorno){
+					try{
+						$("#endereco").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#uf").val(dadosRetorno.uf);
+					}catch(ex){}
+				});
+			});
+		</script>
     </form>

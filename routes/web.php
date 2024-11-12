@@ -52,4 +52,5 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('indexContatos');
 Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('novaEscola');
 Route::post('/cadastro/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
+Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEscola'])->name('verEscola');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -5,14 +5,18 @@
 
             <div class="d-flex flex-row w-100 justify-content-between header-perfil">
                 <div class="d-flex align-items-center">
-                    <h1 class="titulo-perfil">MARISTA</h1>
+                    <h1 class="titulo-perfil">{{$dados->name}}</h1>
                 </div>
                 <div>
                     <div class=" d-flex justify-content-around flex-grow-2 align-items-">
+                        <a class="" href="">
                         <img src="{{ asset('storage/imgs/whatsapp.png') }}" class="footer-icon" style="display: inline-block;"
                             alt="">
+                        </a>
+                        <a href="https://instagram.com/{{$dados->instagram}}">
                         <img src="{{ asset('storage/imgs/instagram.png') }}" class="footer-icon"
                             style="display: inline-block;">
+                        <a href=""></a>
                     </div>
                     <div id="fundo-estrelas-amarelas" class="estrelas-perfil d-flex flex-row justify-content-around">
                         <span class="star-icon full">☆</span>
@@ -32,25 +36,7 @@
 
             <div class="row">
                 <img class="col" src="{{ asset('storage/imgs/fotoMaristaTeste.png') }}" alt="">
-                <p class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus mauris a faucibus
-                    consequat.
-                    Vestibulum ante
-                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut nisl nibh, condimentum eget
-                    finibus
-                    quis,
-                    finibus at urna. Nullam finibus lacus sed dolor luctus, consequat suscipit leo convallis. Curabitur non
-                    turpis
-                    ut
-                    sapien scelerisque ultrices. Nulla eget ipsum augue. Cras iaculis tellus velit, id maximus felis posuere
-                    at.
-                    Mauris
-                    vitae purus et tellus tristique porta. Morbi feugiat lectus lobortis, luctus dui sit amet, volutpat
-                    turpis.
-                    Nulla a
-                    ligula sodales, lobortis arcu quis, feugiat risus. Nunc interdum, quam vel convallis interdum, dui nunc
-                    varius
-                    erat,
-                    id varius tellus lacus ut dui. Morbi nec vestibulum lectus, at convallis ex.</p>
+                <p class="col">{{$dados->descricao1}}</p>
             </div>
             <div class="row d-flex m-3">
                 <ul class="col">
@@ -59,14 +45,7 @@
                     <li>Quadras</li>
                     <li>Cantina</li>
                 </ul>
-                <p class="col" style="flex-grow: 4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus
-                    mauris a
-                    faucibus conse purus et tellus
-                    tristique porta. Morbi feugiat lectus lobortis, luctus dui sit amet, volutpat turpis. Nulla a ligula
-                    sodales,
-                    lobortis arcu quis, feugiat risus. Nunc interdum, quam vel convallis interdum, dui nunc varius erat, id
-                    varius
-                    tellus lacus ut dui. Morbi nec vestibulum lectus, at convallis ex.</p>
+                <p class="col" style="flex-grow: 4">{{$dados->descricao2}}</p>
             </div>
             <div class="row">
                 <div class="col">
@@ -77,12 +56,12 @@
                     </div>
                     <div class="d-flex">
                         <img src="{{ asset('storage/imgs/telefone.svg') }}" alt="" class="mx-2">
-                        <span>35 95568-1234</span>
+                        <span>{{$dados->telefone}}</span>
 
                     </div>
                     <div class="d-flex">
                         <img src="{{ asset('storage/imgs/email.svg') }}" alt="" class="mx-2">
-                        <span>maristavga@dominio.com</span>
+                        <span>{{$dados->email}}</span>
 
                     </div>
                     <div id="piechart" class="w-100"></div>
