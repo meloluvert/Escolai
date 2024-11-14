@@ -51,6 +51,7 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('indexContatos');
 Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('novaEscola');
-Route::post('/cadastro/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
+Route::post('/cadastroEscola/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
+Route::post('/cadastroResponsavel/novo', [App\Http\Controllers\controllerResponsavel::class, 'store'])->name('gravaNovoResponsavel');
 Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEscola'])->name('verEscola');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

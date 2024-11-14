@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('anuncios', function (Blueprint $table) {
             $table->id();
-            $table->integer('motorista_id')->references('id')->on('motoristas')->nullable();
-            $table->integer('escola_id')->references('id')->on('escolas')->nullable();
+            // $table->integer('motorista_id')->references('id')->on('motoristas')->nullable();
+            $table->integer('escola_id')->references('id')->on('escolas');
             $table->string('titulo');
             $table->string('descricao', length: 500)->nullable();
             $table->integer('alcance');

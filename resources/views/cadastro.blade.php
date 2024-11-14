@@ -35,6 +35,8 @@
             }
             document.getElementById(typeName).style.display = "block";
             evt.currentTarget.className += " active";
+                
         }
-    </script>
+    </script>   
+    
 @endsection
