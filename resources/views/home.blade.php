@@ -20,7 +20,10 @@
                     <option value="medio">Ensino Médio</option>
                     <option value="superior">Ensino Superior</option>
                 </select>
-                {{auth()->user()->name}}
+                @if (auth()->check() && auth()->user()->name)
+    {{ auth()->user()->name }}
+@endif  
+
             </div>
             <div>
                 <h4>Série:</h4>

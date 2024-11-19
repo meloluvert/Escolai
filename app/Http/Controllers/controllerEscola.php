@@ -18,7 +18,7 @@ class ControllerEscola extends Controller
     {
         $dados = Escola::all();
         foreach ($dados as $item) {
-            $item->qualidades = ['pública','tem o eduardo', 'ótimo'];
+            $item->qualidades = ['Área de Lazer','Piscina', 'Quadra'];
             $item->cidade = 'Varginha';
         }
         return view('home', compact('dados'));
@@ -57,11 +57,11 @@ class ControllerEscola extends Controller
         $dados->media_mensalidade = $request->input('mediaMensalidade');
         $dados->whatsapp = $request->input('whatsapp');
         $dados->instagram = $request->input('instagram');
-        $dados->descricao1 = 'Lorem ipsum dolor sit amet.';
-        $dados->descricao2 = 'Lorem ipsum dolor sit amet.';
+        $dados->descricao1 = 'Lorem ipsum dolor sit amet. orem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed tempora sequi corporis illo vel ipsum fugiat. Maxime facere, inventore iste laudantium est eorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed tempora sequi corporis illo vel ipsum fugiat. Maxime facere, inventore iste laudantium est expedita praesentium possimus eos, soluta consequuntur quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. .';
+        $dados->descricao2 = 'Lorem ipsum dolor sit amet. orem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed tempora sequi corporis illo vel ipsum fugiat. Maxime facere, inventore iste laudantium est eorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sed tempora sequi corporis illo vel ipsum fugiat. Maxime facere, inventore iste laudantium est expedita praesentium possimus eos, soluta consequuntur quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. .';
         $dados->save();
 
-        return redirect('/home')->with('success', 'Novo contato cadastrado com sucesso.');
+        return redirect('/')->with('success', 'Novo contato cadastrado com sucesso.');
     }
 
     public function verEscola(string $id)

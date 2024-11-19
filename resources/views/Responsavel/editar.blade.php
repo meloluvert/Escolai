@@ -64,7 +64,7 @@
                     <label class="form-check-label" for="exampleCheck1">Concordo com a Política de Privacidade e Termos de
                         Uso</label>
                 </div>
-                <button type="submit" href="{{route('inicio')}}" class="btn btn-danger">Cancelar</button>
+                <button type="submit" href="/" class="btn btn-danger">Cancelar</button>
                 <button type="submit" class="btn btn-primary">Edite</button>
             </form> 
         </div>
