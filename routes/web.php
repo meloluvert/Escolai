@@ -13,25 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('inicio');
-
 Route::get('/editarPerfil', function () {
     return view('Escola/perfil');
-})->name('inicio');
+});
 Route::get('/informacoes', function () {
     return view('Escola/informacoes');
-})->name('inicio');
+});
 Route::get('/editarEscola', function () {
     return view('Escola/editar');
-})->name('inicio');
+});
 Route::get('/editarResponsavel', function () {
     return view('Responsavel/editar');
-})->name('inicio');
+});
 Route::get('/cadastroAnuncio', function () {
     return view('Anuncio/cadastro');
-})->name('inicio');
+});
 Route::get('/login2', function () {
     return view('login');
 });
@@ -54,4 +50,7 @@ Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create']
 Route::post('/cadastroEscola/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
 Route::post('/cadastroResponsavel/novo', [App\Http\Controllers\controllerResponsavel::class, 'store'])->name('gravaNovoResponsavel');
 Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEscola'])->name('verEscola');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/login', [App\Http\Controllers\Auth\EscolaLoginController::class, 'index'])->name('login');
+Route::post('/login', [App\Http\Controllers\Auth\EscolaLoginController::class, 'login'])->name('escola.login.submit');
+Route::post('escola/logout', [App\Http\Controllers\Auth\EscolaLoginController::class, 'logout'])->name('escola.logout');

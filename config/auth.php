@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'escola'=>[
+            'driver' => 'session',
+            'provider' => 'escolas',
+        ]
     ],
 
     /*
@@ -64,6 +68,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+        'escolas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Escola::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
@@ -97,6 +105,12 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'users' => [
+            'provider' => 'escolas',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ]
     ],
 
     /*

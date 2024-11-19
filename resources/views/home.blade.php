@@ -20,6 +20,7 @@
                     <option value="medio">Ensino Médio</option>
                     <option value="superior">Ensino Superior</option>
                 </select>
+                {{auth()->user()->name}}
             </div>
             <div>
                 <h4>Série:</h4>
