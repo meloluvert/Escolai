@@ -28,9 +28,6 @@ Route::get('/editarResponsavel', function () {
 Route::get('/cadastroAnuncio', function () {
     return view('Anuncio/cadastro');
 });
-Route::get('/login2', function () {
-    return view('login');
-});
 Route::get('/docs', function () {
     return view('Informativo/docs');
 })->name('docs');
@@ -45,12 +42,14 @@ Route::get('/sobre', function () {
 Auth::routes();
 
 
-Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('indexContatos');
+Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('home');
 Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('novaEscola');
 Route::post('/cadastroEscola/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
 Route::post('/cadastroResponsavel/novo', [App\Http\Controllers\controllerResponsavel::class, 'store'])->name('gravaNovoResponsavel');
 Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEscola'])->name('verEscola');
 
-Route::get('/login', [App\Http\Controllers\Auth\EscolaLoginController::class, 'index'])->name('login');
-Route::post('/login', [App\Http\Controllers\Auth\EscolaLoginController::class, 'login'])->name('escola.login.submit');
+Route::get('/login', function () {
+    return view('login');
+});
+Route::post('/loginEscola', [App\Http\Controllers\Auth\EscolaLoginController::class, 'login'])->name('escola.login.submit');
 Route::post('escola/logout', [App\Http\Controllers\Auth\EscolaLoginController::class, 'logout'])->name('escola.logout');

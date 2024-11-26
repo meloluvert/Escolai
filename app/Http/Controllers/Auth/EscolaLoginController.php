@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-class EscolaLoginController extends Controller
+use Illuminate\Support\Facades\Auth;
+class EscolaLoginController extends Controller 
 {
+    
     public function __construct()
     {
         $this->middleware('guest:escola')->except('logout');
@@ -30,12 +31,12 @@ class EscolaLoginController extends Controller
             return redirect()->intended(route('home'));
         }
 
-        return redirect()->back()->withInput($request->only('email', 'remember'));
+        return redirect()->intended(route('login'))->withInput($request->only('email', 'remember'));
     }
 
     public function index()
     {
-        return view('login');
+        return view('home');
     }
 
     public function logout(Request $request)

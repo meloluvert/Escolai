@@ -13,7 +13,7 @@
                     Conta
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/login2">Entrar</a>
+                    <a class="dropdown-item" href="/login">Entrar</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/informacoes">Ver Perfil da Escola</a>
                     <a class="dropdown-item" href="/editarPerfil">Editar Perfil da Escola</a>

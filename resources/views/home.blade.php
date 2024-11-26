@@ -20,9 +20,11 @@
                     <option value="medio">Ensino Médio</option>
                     <option value="superior">Ensino Superior</option>
                 </select>
-                @if (auth()->check() && auth()->user()->name)
-    {{ auth()->user()->name }}
-@endif  
+                @if (auth()->guard('escola')->check())
+                    {{Auth::guard('escola')->escola()->name}}
+                @else
+                    {{'dbhjdk'}}
+                @endif
 
             </div>
             <div>
