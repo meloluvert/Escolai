@@ -21,7 +21,7 @@
                     <option value="superior">Ensino Superior</option>
                 </select>
                 @if (auth()->guard('escola')->check())
-                    {{Auth::guard('escola')->escola()->name}}
+                    {{Auth::guard('escola')->user()->name}}
                 @else
                     {{'dbhjdk'}}
                 @endif

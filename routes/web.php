@@ -51,5 +51,5 @@ Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEs
 Route::get('/login', function () {
     return view('login');
 });
-Route::post('/loginEscola', [App\Http\Controllers\Auth\EscolaLoginController::class, 'login'])->name('escola.login.submit');
+Route::post('/escola/login', [App\Http\Controllers\Auth\EscolaLoginController::class, 'login'])->name('escola.login.submit');
 Route::post('escola/logout', [App\Http\Controllers\Auth\EscolaLoginController::class, 'logout'])->name('escola.logout');
