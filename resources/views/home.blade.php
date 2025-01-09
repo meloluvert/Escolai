@@ -23,7 +23,7 @@
                 @if (auth()->guard('escola')->check())
                     {{Auth::guard('escola')->user()->name}}
                 @else
-                    {{'dbhjdk'}}
+                    {{'nome do usuário aqui'}}
                 @endif
 
             </div>

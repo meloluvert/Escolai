@@ -5,23 +5,24 @@
     </div>
     <div id="escola" class="my-1">
         <div style="display:flex; align-items: center; justify-content: center;">
-            <form>
+            <form action="/escolaEdit/{{Auth::guard('escola')->user()->id}}" method="POST">
+                @csrf
                 <div class="row" style="display:flex">
                     <div class=" col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Nome*</label>
-                        <input type="text" name="nome" value="Zinédine Zidane" class="form-control" id="nome"
+                        <input type="text" name="nome" value="{{$dados->name}}" class="form-control" id="nome"
                             aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3 col" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Telefone*</label>
-                        <input type="tel" name="telefone" value="(35) 01234-5678" class="form-control" id="numero"
+                        <input type="tel" name="telefone" value="{{$dados->telefone}}" class="form-control" id="numero"
                             required>
                     </div>
                 </div>
                 <div class="row" style="display:flex">
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">E-mail*</label>
-                        <input type="email" name="email" value="zidane@email.com" class="form-control"
+                        <input type="email" name="email" value="{{$dados->email}}" class="form-control"
                             id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     </div>
                     <div class="col">
@@ -40,59 +41,49 @@
                 </div>
                 <div class="mb-3" style="align-items: center; justify-content: center;">
                     <label for="exampleInputEmail1" class="form-label">CEP*</label>
-                    <input type="tel" class="form-control" value="77889-99" name="cep" id="cep" required>
+                    <input type="tel" class="form-control" value="{{$dados->cep}}" name="cep" id="cep" required>
                 </div>
                 <div class="row" style="display:flex">
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Endereço*</label>
-                        <input type="text" class="form-control" value="Rua Romário" name="endereco" id="endereco"
+                        <input type="text" class="form-control" value="" name="endereco" id="endereco"
                             aria-describedby="emailHelp" required>
                     </div>
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Número*</label>
-                        <input type="number" class="form-control" value="11" name="numero" id="numcasa" required>
+                        <input type="number" class="form-control" value="{{$dados->numero}}" name="numero" id="numcasa" required>
                     </div>
                 </div>
                 <div class="row" style="display:flex">
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Estado*</label>
-                        <input type="text" class="form-control" value="MG" name="estado" id="estado"
+                        <input type="text" class="form-control" value="" name="estado" id="uf"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Cidade*</label>
-                        <input type="text" value="Varginha" class="form-control" id="cidade">
+                        <input type="text" value="" class="form-control" name="cidade" id="cidade">
                     </div>
-                </div>
-                <div class="row" style="display:flex">
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
-                        <label for="exampleInputEmail1" class="form-label">Nº de Alunos*</label>
-                        <input type="number" placehoder="77 00" class="form-control" name="qtdAlunos" id="nalunos"
-                            required>
-                    </div>
+                <label for="bairro" class="form-label">Bairro*</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Damasco"  class="form-control">
+            </div>
+                </div>
+                <div class="row" style="display:flex">      
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Média de Mensalidade*</label>
-                        <input type="number" value="700" class="form-control" name="mediaMensalidade"
+                        <input type="number" value="{{$dados->media_mensalidade}}" class="form-control" name="mediaMensalidade"
                             id="mensalidade" required>
                     </div>
-                </div>
-                <div class="mb-3" style="align-items: center; justify-content: center;">
-                    <label for="exampleInputEmail1" class="form-label">Nome do Coordenador*</label>
-                    <input type="text" value="Ronaldo" class="form-control" id="nomecoordenador">
-                </div>
-                <div class="mb-3" style="align-items: center; justify-content: center;">
-                    <label for="exampleInputEmail1" class="form-label">CPF do Coordenador*</label>
-                    <input type="tel" value="123.456.789-10" class="form-control" name="nomeCoordenador"
-                        id="cpfcoordenador" required>
                 </div>
                 <div class="row" style="display:flex">
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Instagram</label>
-                        <input type="text" value="escola" class="form-control" name="instagram" id="instagram">
+                        <input type="text" value="{{$dados->instagram}}" class="form-control" name="instagram" id="instagram">
                     </div>
                     <div class="col mb-3" style="align-items: center; justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Whatsapp</label>
-                        <input type="tel" value="(35) 3221-0000" class="form-control" name="whatsapp"
+                        <input type="tel" value="{{$dados->whatsapp}}" class="form-control" name="whatsapp"
                             id="whatsapp">
                     </div>
                 </div>
@@ -106,4 +97,24 @@
             </form>
         </div>
     </div>
+    <script>
+			$("#cep").blur(function(){
+				var cep = this.value.replace(/[^0-9]/, "");
+				
+				if(cep.length != 8){
+					return false;
+				}
+		
+				var url = "https://viacep.com.br/ws/"+cep+"/json/";
+			
+				$.getJSON(url, function(dadosRetorno){
+					try{
+						$("#endereco").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#uf").val(dadosRetorno.uf);
+					}catch(ex){}
+				});
+			});
+		</script>
 @endsection

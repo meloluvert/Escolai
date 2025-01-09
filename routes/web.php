@@ -19,9 +19,6 @@ Route::get('/editarPerfil', function () {
 Route::get('/informacoes', function () {
     return view('Escola/informacoes');
 });
-Route::get('/editarEscola', function () {
-    return view('Escola/editar');
-});
 Route::get('/editarResponsavel', function () {
     return view('Responsavel/editar');
 });
@@ -46,8 +43,10 @@ Route::get('/', [App\Http\Controllers\controllerEscola::class, 'index'])->name('
 Route::get('/cadastro', [App\Http\Controllers\controllerEscola::class, 'create'])->name('novaEscola');
 Route::post('/cadastroEscola/novo', [App\Http\Controllers\controllerEscola::class, 'store'])->name('gravaNovaEscola');
 Route::post('/cadastroResponsavel/novo', [App\Http\Controllers\controllerResponsavel::class, 'store'])->name('gravaNovoResponsavel');
+Route::get('/escola/editar/{id}', [App\Http\Controllers\controllerEscola::class, 'edit'])->name('editarEscola');
+Route::get('/escola/apagar/{id}', [App\Http\Controllers\controllerEscola::class, 'destroy'])->name('editarEscola');
+Route::post('/escolaEdit/{id}', [App\Http\Controllers\controllerEscola::class, 'update'])->name('updateEscola');
 Route::get('/escola/{id}', [App\Http\Controllers\controllerEscola::class, 'verEscola'])->name('verEscola');
-
 Route::get('/login', function () {
     return view('login');
 });

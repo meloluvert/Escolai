@@ -17,7 +17,11 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/informacoes">Ver Perfil da Escola</a>
                     <a class="dropdown-item" href="/editarPerfil">Editar Perfil da Escola</a>
-                    <a class="dropdown-item" href="/editarEscola">Editar Informações Escola</a>
+                    @if (auth()->guard('escola')->check())
+                    <a class="dropdown-item" href="/escola/editar/{{Auth::guard('escola')->user()->id}}">Editar Informações Escola</a>
+                    <a href="dropdown-item" href="/escola/apagar/{{Auth::guard('escola')->user()->id}}">Apagar Conta</a>
+                    @endif
+                   
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/editarResponsavel">Editar Informações Responsável</a>
                     <div class="dropdown-divider"></div>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('estado', length: 2);
             $table->string('cidade');
             $table->string('bairro');
+            $table->string('numero');
             $table->timestamps();
         });
     }

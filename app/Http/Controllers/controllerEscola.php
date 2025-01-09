@@ -29,6 +29,50 @@ class ControllerEscola extends Controller
         return view('cadastro');
     }
 
+    public function edit(string $id){
+        $this->middleware('auth');
+        $dados = Escola::find($id);
+
+        if(isset($dados)){
+            $end = Endereco::find($id);
+            $dados->cep = $end->cep;
+            $dados->numero = $end->numero;
+            return view('Escola/editar', compact('dados'));
+        }
+        return view('Escola/editar', compact('dados'));
+    }
+
+    public function update(string $id, Request $request){
+        $this->middleware('auth');
+        
+        
+        $end = Endereco::find($id);
+        $end->cep = $request->input('cep');
+        $end->bairro = $request->input('bairro');
+        $end->rua = $request->input('endereco');
+        $end->cidade = $request->input('cidade');
+        $end->estado = $request->input('estado');
+        $end->numero = $request->input('numero');
+        $end->save();
+        // Criando a escola
+        $dados = Escola::find($id);
+        if(isset($dados)){
+            $dados->name = $request->input('nome');
+            $dados->telefone = $request->input('telefone');
+            $dados->email = $request->input('email');
+            $dados->password = Hash::make($request->input('senha'));
+            $dados->endereco = $end->id;  // Relacionando o endereço com a escola
+            $dados->media_mensalidade = $request->input('mediaMensalidade');
+            $dados->whatsapp = $request->input('whatsapp');
+            $dados->instagram = $request->input('instagram');
+            return redirect('/')->with('success', ' alterado com sucesso');
+        }
+
+        return redirect('/')->with('danger', 'não há escola com seu id');
+       
+
+
+    }
     public function store(Request $request)
     {
         // Validação dos dados
@@ -45,6 +89,7 @@ class ControllerEscola extends Controller
         $end->rua = $request->input('endereco');
         $end->cidade = $request->input('cidade');
         $end->estado = $request->input('estado');
+        $end->numero = $request->input('numero');
         $end->save();
 
         // Criando a escola
@@ -69,4 +114,13 @@ class ControllerEscola extends Controller
         $dados = Escola::find($id);
         return view('Escola/informacoes', compact('dados'));
     }
+    public function destroy(string $id){
+        $this->middleware('auth');
+        $dados =  Agenda:: find($id); 
+        if (isset($dados)) { 
+            $dados->delete(); 
+            return redirect('/contatos')->with('success', 'Contato deletado com sucesso.'); 
+        } 
+            return redirect('/contatos')->with('danger', 'Erro ao tentar deletar contato.');
+        }
 }

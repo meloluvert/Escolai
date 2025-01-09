@@ -39,7 +39,7 @@
             </div>
             <div class="col mb-3" style="align-items: center; justify-content: center;">
                 <label for="numcasa" class="form-label">Número*</label>
-                <input type="number" class="form-control" placeholder="11" name="numero" id="numcasa" required>
+                <input type="number" class="form-control" placeholder="11" name="numero" id="numero" required>
             </div>
         </div>
         <div class="row" style="display:flex">
